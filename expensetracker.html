@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>expense tracker</title>
+  <link href="./src/output.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Indie+Flower&family=Libertinus+Math&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Pacifico&family=Poiret+One&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+  <style>
+    body{
+      height: 100vh;
+      width: 100vw;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #CD6D32;
+      font-family: Roboto;
+    }
+    .std-button{
+      padding:2px;
+      font-weight: bold;
+      color:white;
+      box-shadow: 1px 1px 2px rgb(68, 66, 66);
+    }
+    .hover-std{
+      opacity: 0.8;
+      cursor: pointer;
+    }
+
+    .std-input{
+      background-color: white;
+      padding: 2px;
+      border-radius: 3px;
+      --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+      --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+      box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
+         
+    }
+    .end-ka-btn{
+      position: absolute;
+      right: 2px;
+    }
+  </style>
+</head>
+<body>
+  <div class="relative max-[600px]:min-h-24 lg:min-h-16 w-[80%] bg-[#CD3244] p-1 rounded-xl shadow-md">
+    <h3 class="text-center text-[#CDBB32] ">Expense Tracker</h3>
+
+  <form id="expense-form" class="text-[10px] flex flex-wrap gap-2 justify-around w-full">
+    <input type="text" id="expense-name" placeholder="Expense"
+      class="std-input focus:ring-amber-200 flex-1 min-w-[80px]" required>
+    <input type="number" id="expense-amt" placeholder="Amount(Rs)"
+      class="std-input focus:ring-amber-200 flex-1 min-w-[80px]" required>
+    <button id="add-expense" type="submit"
+      class="p-0.5 std-button bg-[#702963] hover:hover-std">Add</button>
+  </form>
+
+    <p class="md:text-sm max-[600px]:text-xs">Expenses</p>
+    <ul id="entries" class="text-[11px] md:text-[9px] text-[#CD6D32] align-middle overflow-y-scroll"></ul>
+    <div class="md:text-sm max-[600px]:text-xs">
+      <p class="text-[#CDBB32]">Total is Rs.<span id="total" class="underline">0.00</span></p>
+    </div>
+  </div>
+  <script src="expensetracker.js"></script>
+</body>
+</html>

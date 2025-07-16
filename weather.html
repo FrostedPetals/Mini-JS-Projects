@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>weather forecast</title>  
+  <link href="./src/output.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Indie+Flower&family=Libertinus+Math&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Pacifico&family=Poiret+One&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+  <style>
+    html,body{
+      height: 100vh;
+      width: 100vw;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: Montserrat;
+    }
+    body{
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      overflow-y: auto;
+    }
+  </style>
+</head>
+<body>
+  <div class="min-h-16 w-[60%] bg-sky-700 flex flex-col p-0.5 shrink-0">
+    <div id="input-container" class="grid grid-cols-4 text-[10px]">
+      <input id="cityinput" type="text" placeholder="Enter city" class="col-start-1
+      col-end-4 p-1 bg-white focus:ring-1 focus:ring-sky-400">
+      <button id="get-weather" class="col-span-1 hover:bg-sky-600 text-[8px]">Get weather</button>
+    </div>
+
+    <div id="weatherinfo" class="hidden text-[10px] flex flex-col text-white">
+      <p id="city-name" class="bg-yellow-300"></p>
+      <p id="temp" class="bg-gray-300"></p>
+      <p id="description" class="bg-sky-300"></p>
+    </div>
+    <p id="error-msg" class="hidden text-[10px] text-red-300">Sorry,no such city exists</p>
+  </div>
+  <script src="./weather.js"></script>
+</body>
+</html>
