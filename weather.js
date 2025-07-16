@@ -8,7 +8,7 @@ const citydisp=document.getElementById("city-name");
 const temp=document.getElementById("temp");
 const desc=document.getElementById("description");
 const err=document.getElementById("error-msg");
-let API_KEY="9107e6b05a0a6cc9f671b313846bec7f";
+let API_KEY=${API};
 
 btn.addEventListener("click",async()=>{
   const city=cityinput.value.trim();
